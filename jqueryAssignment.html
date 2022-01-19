@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>JQuery Assignment</title>
+    <style>
+      .infoPallete {
+        margin-left: -1500px;
+        padding: 10px 20px;
+      }
+      .infoPallete:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        padding: 5px 15px;
+      }
+      .borderBtm {
+        border-bottom: 1px solid grey;
+      }
+    </style>
+  </head>
+ 
+  <body>
+    <div class="comments" style="border: 1px solid green;padding:1rem;margin-bottom: 0.5rem;">
+    </div>
+    <button id="load">Load Data</button>
+    <script>
+      $('#load').click(function(){
+        let comment;
+        $.ajax({
+          type: "GET",
+          url: "https://jsonplaceholder.typicode.com/posts",
+          dataType: "json",
+          success: function (result, status, xhr) {
+            $.each(result, function(index) {
+              var record = this;
+              setTimeout(function(){
+                $('.comments').find(".infoPallete:last").addClass('borderBtm');
+                comment = '<div id="' + record.id + '" class="infoPallete"><h3 class="title">' + record.title + '</h3><p class="body">' + record.body + '</p></div >';
+                $(".comments").append(comment);
+                $('.comments').find(".infoPallete:last").animate({marginLeft: '0px'});
+              }, 1000*index, record);
+            });
+          },
+          error: function (xhr, status, error) {
+            alert("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText)
+          }
+        });
+      });
+    </script>
+  </body>
+</html> 

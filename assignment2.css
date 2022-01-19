@@ -1,0 +1,51 @@
+body {
+  height: 100vh;
+  width: 100%;
+  font-size: 12px;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+hr {
+  width: 100%;
+  border: 2px solid grey;
+  margin: 20px 0px;
+}
+#input-paragraph, #input-team-json {
+  margin: 20px;
+  height: 150px;
+  max-width: 600px;
+  width: 100%;
+}
+.output-section, .input-label{
+  max-width: 600px;
+  width: 100%;
+}
+#output-label, #team-output-label, .input-label {
+  text-align: left;
+  font-weight: 700;
+}
+
+#team-output{
+  margin-left: 30px;
+}
+.jquery-assignment-link, .jquery-assignment-link:hover {
+  text-decoration: none;
+  margin: 30px 0 40px 0 !important;
+  padding: 6px 20px 0px 20px !important;
+}
+.custom-btn {
+  padding: 0px 20px;
+  height: 35px;
+  background: white;
+  display: block;
+  margin: auto;
+  border: 2px solid #0c8bcf;
+  border-radius: 40px;
+  color: #0c8bcf;
+  text-align: center;
+  cursor: pointer;
+}

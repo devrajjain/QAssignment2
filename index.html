@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assignment2.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="assignment2.js"></script>
+  <title>JavaScript Assignment</title>
+</head>
+<body>
+  <div class="wrapper">
+    <a href="jqueryAssignment.html" class="jquery-assignment-link custom-btn">Visit JQuery Assignment</a>
+    <div class="input-label">Input:</div>
+    <textarea id="input-paragraph">Thank you so much for contacting us. Dreamland guest relations. You're speaking with Ronaldo. May I have your name, please? Yes, sure. My name is robin soleimani. What is your phone number? It is 9876535362 as mentioned in the book Diary. Thank you so much for providing the info!</textarea>
+    <br>
+    <input type="button" id="filter-btn" class="custom-btn" value="Filter Sentences" onclick="filterSentences()" />
+    <div class="output-section">
+      <div id="output-label"></div>
+      <br>
+      <ol id="output-list"></ol>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div class="input-label">Input:</div>
+    <textarea id="input-team-json"> {"aaiec": 400, 
+      "aaiwc": 60, 
+      "qai": 200, 
+      "poc": 100,
+      "gtm": 50,
+      "hr": 10
+      }</textarea>
+    <br>
+    <input type="button" id="sort-btn" class="custom-btn" value="Sort Teams" onclick="sortTeams()" />
+    <div class="output-section">
+      <div id="team-output-label"></div>
+      <br>
+      <div id="team-output"></div>
+    </div>
+  </div>
+</body>
+</html>
